@@ -39,6 +39,11 @@ class User implements UserInterface
      */
     private $disabled;
 
+    public function __construct()
+    {
+        $this->disabled = false;
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -102,6 +107,11 @@ class User implements UserInterface
     public function enable(): void
     {
         $this->disabled = false;
+    }
+
+    public function isDisabled(): bool
+    {
+        return (bool) $this->disabled;
     }
 
     /**
