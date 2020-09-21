@@ -23,6 +23,9 @@
     "doctrine/common": {
         "version": "3.0.2"
     },
+    "doctrine/data-fixtures": {
+        "version": "1.4.4"
+    },
     "doctrine/dbal": {
         "version": "2.10.4"
     },
@@ -39,6 +42,18 @@
             "config/packages/prod/doctrine.yaml",
             "src/Entity/.gitignore",
             "src/Repository/.gitignore"
+        ]
+    },
+    "doctrine/doctrine-fixtures-bundle": {
+        "version": "3.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.0",
+            "ref": "e5b542d4ef47d8a003c91beb35650c76907f7e53"
+        },
+        "files": [
+            "src/DataFixtures/AppFixtures.php"
         ]
     },
     "doctrine/doctrine-migrations-bundle": {
@@ -84,6 +99,18 @@
     "egulias/email-validator": {
         "version": "2.1.21"
     },
+    "jms/metadata": {
+        "version": "2.3.0"
+    },
+    "jms/serializer": {
+        "version": "3.9.0"
+    },
+    "knplabs/knp-menu": {
+        "version": "v3.1.2"
+    },
+    "knplabs/knp-menu-bundle": {
+        "version": "v3.0.0"
+    },
     "monolog/monolog": {
         "version": "1.25.5"
     },
@@ -128,6 +155,39 @@
         "files": [
             "config/packages/sensio_framework_extra.yaml"
         ]
+    },
+    "sonata-project/admin-bundle": {
+        "version": "3.64",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "3.64",
+            "ref": "e300c83e77d35a352b863a82c8d039f29f10fd62"
+        }
+    },
+    "sonata-project/block-bundle": {
+        "version": "3.21.0"
+    },
+    "sonata-project/cache": {
+        "version": "2.0.1"
+    },
+    "sonata-project/doctrine-extensions": {
+        "version": "1.9.1"
+    },
+    "sonata-project/exporter": {
+        "version": "2.3.0"
+    },
+    "sonata-project/form-extensions": {
+        "version": "1.4",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.4",
+            "ref": "bfc222606aea5418345af70104d974a25dc7c441"
+        }
+    },
+    "sonata-project/twig-extensions": {
+        "version": "1.4.1"
     },
     "symfony/asset": {
         "version": "v4.4.13"
@@ -324,6 +384,9 @@
             "tests/bootstrap.php"
         ]
     },
+    "symfony/polyfill-intl-grapheme": {
+        "version": "v1.18.1"
+    },
     "symfony/polyfill-intl-icu": {
         "version": "v1.18.1"
     },
@@ -371,6 +434,9 @@
             "config/routes.yaml"
         ]
     },
+    "symfony/security-acl": {
+        "version": "v3.1.0"
+    },
     "symfony/security-bundle": {
         "version": "4.4",
         "recipe": {
@@ -405,6 +471,12 @@
         "version": "v2.2.0"
     },
     "symfony/stopwatch": {
+        "version": "v4.4.13"
+    },
+    "symfony/string": {
+        "version": "v5.1.5"
+    },
+    "symfony/templating": {
         "version": "v4.4.13"
     },
     "symfony/test-pack": {
@@ -486,6 +558,9 @@
         "version": "v4.4.13"
     },
     "twig/extra-bundle": {
+        "version": "v3.0.5"
+    },
+    "twig/string-extra": {
         "version": "v3.0.5"
     },
     "twig/twig": {
