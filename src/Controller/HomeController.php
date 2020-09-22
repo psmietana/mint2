@@ -14,7 +14,7 @@ class HomeController extends AbstractController
     {
         return $this->redirectToRoute(null === $this->getUser()
             ? 'app_login'
-            : 'sonata_admin_dashboard'
+            : 'admin_app_user_list'
         );
     }
 }
