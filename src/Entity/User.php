@@ -99,14 +99,14 @@ class User implements UserInterface
         $this->password = $password;
     }
 
-    public function disable(): void
+    public function getDisabled(): bool
     {
-        $this->disabled = true;
+        return (bool) $this->disabled;
     }
 
-    public function enable(): void
+    public function setDisabled(bool $disabled): void
     {
-        $this->disabled = false;
+        $this->disabled = $disabled;
     }
 
     public function isDisabled(): bool

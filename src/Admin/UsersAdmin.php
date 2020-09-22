@@ -20,6 +20,7 @@ class UsersAdmin extends AbstractAdmin
             ->add('email')
             ->add('disabled', TemplateRegistry::TYPE_BOOLEAN, [
                 'editable' => true,
+                'template' => 'users/list/fields/list_boolean.html.twig'
             ]);
     }
 }
