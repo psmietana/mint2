@@ -31,6 +31,6 @@ services:
     # please note that last definitions always *replace* previous ones
     admin.user:
         class: App\Admin\UsersAdmin
-        arguments: [~, App\Entity\User, ~]
+        arguments: [~, App\Entity\User, App\Controller\UsersController]
         tags:
             - { name: sonata.admin, manager_type: orm, label: User }

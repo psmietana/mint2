@@ -4,6 +4,7 @@ namespace App\Admin;
 
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
+use Sonata\AdminBundle\Route\RouteCollection;
 use Sonata\AdminBundle\Templating\TemplateRegistry;
 
 class UsersAdmin extends AbstractAdmin
@@ -19,8 +20,20 @@ class UsersAdmin extends AbstractAdmin
         $listMapper
             ->add('email')
             ->add('disabled', TemplateRegistry::TYPE_BOOLEAN, [
-                'editable' => true,
-                'template' => 'users/list/fields/list_boolean.html.twig'
+                'editable' => false,
+            ])
+            ->add('_action', null, [
+                'actions' => [
+                    'clone' => [
+                        'template' => 'CRUD/list__action_clone.html.twig',
+                    ],
+                ],
             ]);
+    }
+
+    protected function configureRoutes(RouteCollection $collection)
+    {
+        $collection
+            ->add('disable', $this->getRouterIdParameter().'/disable');
     }
 }
