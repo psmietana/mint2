@@ -34,6 +34,9 @@ class UsersAdmin extends AbstractAdmin
     protected function configureRoutes(RouteCollection $collection)
     {
         $collection
-            ->add('disable', $this->getRouterIdParameter().'/disable');
+            ->add('disable', $this->getRouterIdParameter().'/disable')
+            ->remove('create')
+            ->remove('edit')
+            ->remove('delete');
     }
 }
