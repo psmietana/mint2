@@ -1,0 +1,5 @@
+{% if object.isDisabled %}
+    <a class="btn btn-sm label label-default">Disable</a>
+{% else %}
+    <a class="btn btn-sm label label-info" onclick="return confirm('Disable this user? Operation cannot be reverted.')" href="{{ admin.generateObjectUrl('disable', object) }}">Disable</a>
+{% endif %}

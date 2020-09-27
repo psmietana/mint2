@@ -25,7 +25,7 @@ class UsersAdmin extends AbstractAdmin
             ->add('_action', null, [
                 'actions' => [
                     'clone' => [
-                        'template' => 'CRUD/list__action_clone.html.twig',
+                        'template' => 'CRUD/list__action_disable.html.twig',
                     ],
                 ],
             ]);
