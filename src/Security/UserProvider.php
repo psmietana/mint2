@@ -3,7 +3,6 @@
 namespace App\Security;
 
 use App\Entity\User;
-use App\Exception\Security\UserDisabledException;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -32,7 +31,7 @@ final class UserProvider implements UserProviderInterface
         }
 
         if ($user->isDisabled()) {
-            throw new UserDisabledException(
+            throw new UsernameNotFoundException(
                 sprintf(
                     'User with "%s" email is disabled.',
                     $email
